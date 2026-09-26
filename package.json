@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "eleventy",
+    "build": "cross-env NODE_ENV=production eleventy",
     "dev": "eleventy --serve",
     "fmt": "prettier --write ."
   },
@@ -23,8 +23,12 @@
   "devDependencies": {
     "@11ty/eleventy": "^3.1.6",
     "@ianvs/prettier-plugin-sort-imports": "^4.7.1",
+    "cross-env": "^10.1.0",
+    "cssnano": "^9.0.5",
     "lefthook": "^2.1.14",
+    "postcss": "^8.5.28",
     "prettier": "^3.9.9",
-    "prettier-plugin-jinja-template": "^2.2.0"
+    "prettier-plugin-jinja-template": "^2.2.0",
+    "sass": "^1.105.0"
   }
 }
