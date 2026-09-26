@@ -1,0 +1,19 @@
+# Node modules and output
+node_modules
+dist
+
+# Misc
+*.log
+npm-debug.*
+*.scssc
+*.swp
+.DS_Store
+.sass-cache
+.env
+.cache
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
