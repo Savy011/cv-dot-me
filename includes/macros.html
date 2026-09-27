@@ -1,20 +1,57 @@
-{% macro entry(date, title, url, location, description) %}
+{% macro section(heading, items) %}
+  <section
+    class="section"
+    aria-labelledby="speaking-details"
+    aria-labelledby="{{ heading | lower }}-details"
+  >
+    <h3
+      class="section__heading"
+      id="{{ heading | lower }}-details"
+    >
+      {{ heading }}
+    </h3>
+
+    <ol
+      class="section__list"
+      reversed
+    >
+      {% for i in items | reverse %}
+        {{ entry(i.date, i.title, i.url, i.location, i.description, i.images) }}
+      {% endfor %}
+    </ol>
+  </section>
+{% endmacro %}
+
+{% macro entry(date, title, url, location, description, images) %}
   <li class="entry">
     <article class="entry__container">
-      <div class="entry__date-time">
-        <p>{{ date }}</p>
+      <div class="entry__date">
+        <p>
+          {% if date.start and date.end %}
+            {{ date.start }}
+            — {{ date.end }}
+          {% else %}
+            {{ date }}
+          {% endif %}
+        </p>
       </div>
+
       <div class="entry__details">
         <header class="entry__header">
           <h4>
             {% if url %}
-              <a href="{{ url }}">{{ title }}</a>
+              <a
+                href="{{ url }}"
+                target="_blank"
+                >{{ title }}</a
+              >
             {% else %}
               {{ title }}
             {% endif %}
           </h4>
           {% if location %}<p class="entry__location">{{ location }}</p>{% endif %}
         </header>
+
         {% if description %}
           <div class="entry__description">
             {% for para in description.split("\n\n") %}
@@ -24,5 +61,13 @@
         {% endif %}
       </div>
     </article>
+
+    {% if images and images.length > 0 %}
+      <div class="entry__gallery">
+        {% for image in images %}
+          <img src="/_assets/{{ image.src }}" />
+        {% endfor %}
+      </div>
+    {% endif %}
   </li>
 {% endmacro %}

@@ -3,9 +3,26 @@
 
   &__container {
     display: flex;
+    margin-bottom: 1rem;
   }
 
-  &__date-time {
+  &__date {
     flex-basis: 9rem;
+    flex-shrink: 0;
+  }
+
+  &__details {
+    overflow: hidden;
+  }
+
+  &__gallery {
+    padding-left: 9rem;
+    display: flex;
+    gap: 1rem;
+    overflow-x: scroll;
+
+    img {
+      height: 12rem;
+    }
   }
 }

@@ -3,6 +3,8 @@ title: Harmanjeet Sahota
 layout: "layouts/base.html"
 ---
 
+{% from "macros.html" import section %}
 {% include "blocks/header.html" %}
-{% include "blocks/speaking.html" %}
+{{ section("Projects", projects) }}
+{{ section("Speaking", speaking) }}
 {% include "blocks/contact.html" %}
