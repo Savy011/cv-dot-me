@@ -1,0 +1,12 @@
+<section class="contact">
+  <h3 class="section__heading">Contact</h3>
+
+  <ul>
+    {% for item in contact %}
+      <li class="contact__item">
+        <div class="contact__platform">{{ item.platform }}</div>
+        <div class="contact__label"><a href="https://{{ item.url }}">{{ item.label }}</a></div>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
