@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  padding: 2rem;
+
+  &__profile {
+    max-width: 8rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    img {
+      min-height: 100%;
+    }
+  }
+
+  &__details {
+    padding: 1rem;
+  }
+}
