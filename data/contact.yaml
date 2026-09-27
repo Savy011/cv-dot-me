@@ -1,15 +1,18 @@
+- platform: E-Mail
+  label: savy.novachez011@gmail.com
+  url: mailto:savy.novachez011@gmail.com
 - platform: Github
   label: Savy011
-  url: www.github.com/Savy011
+  url: https://www.github.com/Savy011
 - platform: Codeberg
   label: savy
-  url: https://codeberg.org/savy
+  url: https://https://codeberg.org/savy
 - platform: Website
   label: yvas.me
-  url: yvas.me
+  url: https://yvas.me
 - platform: Bluesky
   label: "@yvas.me"
-  url: bsky.app/profile/yvas.me/follows
+  url: https://bsky.app/profile/yvas.me/follows
 - platform: Twitter/X
   label: "@ssuaviny"
-  url: x.com/ssuaviny
+  url: https://x.com/ssuaviny

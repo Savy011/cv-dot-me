@@ -2,6 +2,8 @@
 @use "config" as c;
 
 @use "blocks/header";
+@use "blocks/contact";
+@use "blocks/section";
 
 body {
   font-family: c.$fonts-body;

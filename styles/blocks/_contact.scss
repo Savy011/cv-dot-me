@@ -1,0 +1,15 @@
+.contact {
+  padding-block: 1rem;
+
+  &__list > * {
+    margin-bottom: 1rem;
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__platform {
+    flex-basis: 9rem;
+  }
+}

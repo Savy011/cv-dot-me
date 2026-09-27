@@ -1,6 +1,7 @@
 .header {
   display: flex;
-  padding: 2rem;
+  padding-block: 1rem;
+  gap: 1rem;
 
   &__profile {
     max-width: 8rem;
@@ -14,6 +15,6 @@
   }
 
   &__details {
-    padding: 1rem;
+    padding-block: 1rem;
   }
 }

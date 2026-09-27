@@ -1,12 +1,20 @@
-<section class="contact">
-  <h3 class="section__heading">Contact</h3>
+<section
+  class="contact"
+  aria-labelledby="contact-details"
+>
+  <h3
+    class="section__heading"
+    id="contact-details"
+  >
+    Contact
+  </h3>
 
-  <ul>
+  <dl class="contact__list">
     {% for item in contact %}
-      <li class="contact__item">
-        <div class="contact__platform">{{ item.platform }}</div>
-        <div class="contact__label"><a href="https://{{ item.url }}">{{ item.label }}</a></div>
-      </li>
+      <div class="contact__item">
+        <dt class="contact__platform">{{ item.platform }}</dt>
+        <dd class="contact__label"><a href="{{ item.url }}">{{ item.label }}</a></dd>
+      </div>
     {% endfor %}
-  </ul>
+  </dl>
 </section>
