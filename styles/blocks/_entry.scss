@@ -1,0 +1,11 @@
+.entry {
+  margin-bottom: 1rem;
+
+  &__container {
+    display: flex;
+  }
+
+  &__date-time {
+    flex-basis: 9rem;
+  }
+}

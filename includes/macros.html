@@ -1,0 +1,28 @@
+{% macro entry(date, title, url, location, description) %}
+  <li class="entry">
+    <article class="entry__container">
+      <div class="entry__date-time">
+        <p>{{ date }}</p>
+      </div>
+      <div class="entry__details">
+        <header class="entry__header">
+          <h4>
+            {% if url %}
+              <a href="{{ url }}">{{ title }}</a>
+            {% else %}
+              {{ title }}
+            {% endif %}
+          </h4>
+          {% if location %}<p class="entry__location">{{ location }}</p>{% endif %}
+        </header>
+        {% if description %}
+          <div class="entry__description">
+            {% for para in description.split("\n\n") %}
+              <p>{{ para | trim }}</p>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    </article>
+  </li>
+{% endmacro %}

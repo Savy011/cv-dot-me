@@ -4,9 +4,11 @@
 @use "blocks/header";
 @use "blocks/contact";
 @use "blocks/section";
+@use "blocks/entry";
 
 body {
   font-family: c.$fonts-body;
+  padding-block: 4rem;
 }
 
 h1,
