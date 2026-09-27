@@ -1,11 +1,12 @@
 ---
-title: Harmanjeet Sahota
 layout: "layouts/base.html"
 ---
 
 {% from "macros.html" import section %}
 {% include "blocks/header.html" %}
+{{ section("Work Experience", work) }}
 {{ section("Projects", projects) }}
+{{ section("Activites", activites) }}
 {{ section("Speaking", speaking) }}
 {{ section("Education", education) }}
 {% include "blocks/contact.html" %}
