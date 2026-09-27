@@ -1,0 +1,14 @@
+@use "reset";
+@use "config" as c;
+
+body {
+  font-family: c.$fonts-body;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: c.$fonts-heading;
+}

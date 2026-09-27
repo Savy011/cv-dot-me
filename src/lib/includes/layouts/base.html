@@ -1,0 +1,40 @@
+{% set assetHash = global.random() %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>{{ title }}</title>
+
+    <!-- prettier-ignore-start -->
+    <style>
+      {% renderFile "./src/lib/styles/critical.scss" %}
+    </style>
+    <!-- prettier-ignore-end -->
+
+    {% if pageCriticalStyles %}
+      {% for item in pageCriticalStyles %}
+        <!-- prettier-ignore-start -->
+        <style>
+        {% renderFile "./src/lib/styles/"+item %}
+        </style>
+        <!-- prettier-ignore-end -->
+      {% endfor %}
+    {% endif %}
+
+    <link
+      rel="stylesheet"
+      media="print"
+      href="/fonts.css?{{ assetHash }}"
+      onload="this.media='all'"
+    />
+  </head>
+
+  <body>
+    <div class="wrapper">{{ content | safe }}</div>
+  </body>
+</html>

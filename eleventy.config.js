@@ -1,3 +1,5 @@
+import { RenderPlugin } from "@11ty/eleventy";
+
 import * as extensions from "./src/lib/extensions.js";
 
 export default function (cfg) {
@@ -7,7 +9,9 @@ export default function (cfg) {
 
   cfg.addExtension("scss", extensions.sass);
 
-  cfg.addPassthroughCopy({ static: "/", assets: "/assets" });
+  cfg.addPassthroughCopy({ static: "/", assets: "/_assets" });
+
+  cfg.addPlugin(RenderPlugin);
 
   cfg.addWatchTarget("./src/lib/styles/");
 
