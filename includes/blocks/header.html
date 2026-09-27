@@ -1,10 +1,10 @@
 <header class="header">
   <div class="header__profile">
-    <img src="/_assets/profile.gif" />
+    <img src="/_assets/{{ config.profile_img }}" />
   </div>
   <div class="header__details">
-    <h1 class="header__title">Harmanjeet Singh Sahota</h1>
-    <p class="header__subtitle">@ Chandigarh (He, Him, They)</p>
-    <p class="header__link"><a href="https://yvas.me">https://yvas.me</a></p>
+    <h1 class="header__title">{{ config.name }}</h1>
+    <p class="header__subtitle">@ {{ config.location }} ({{ config.pronouns }})</p>
+    <p class="header__link"><a href="{{ config.website }}">{{ config.website }}</a></p>
   </div>
 </header>
