@@ -1,6 +1,8 @@
 @use "reset";
 @use "config" as c;
 
+@use "blocks/header";
+
 body {
   font-family: c.$fonts-body;
 }

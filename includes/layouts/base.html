@@ -12,19 +12,9 @@
 
     <!-- prettier-ignore-start -->
     <style>
-      {% renderFile "./src/lib/styles/critical.scss" %}
+      {% renderFile "./styles/critical.scss" %}
     </style>
     <!-- prettier-ignore-end -->
-
-    {% if pageCriticalStyles %}
-      {% for item in pageCriticalStyles %}
-        <!-- prettier-ignore-start -->
-        <style>
-        {% renderFile "./src/lib/styles/"+item %}
-        </style>
-        <!-- prettier-ignore-end -->
-      {% endfor %}
-    {% endif %}
 
     <link
       rel="stylesheet"

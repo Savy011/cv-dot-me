@@ -1,6 +1,6 @@
 import { RenderPlugin } from "@11ty/eleventy";
 
-import * as extensions from "./src/lib/extensions.js";
+import * as extensions from "./lib/extensions.js";
 
 export default function (cfg) {
   cfg.setServerOptions({
@@ -13,14 +13,14 @@ export default function (cfg) {
 
   cfg.addPlugin(RenderPlugin);
 
-  cfg.addWatchTarget("./src/lib/styles/");
+  cfg.addWatchTarget("./styles/");
 
   return {
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
     dir: {
-      input: "src/pages",
-      includes: "../lib/includes",
+      input: "pages",
+      includes: "../includes",
       data: "../data",
       output: "dist",
     },
